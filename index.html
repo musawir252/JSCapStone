@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZwT" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+  <title>Game Selector</title>
+</head>
+<body class="bg-dark text-white">
+  <div class="container">
+    <h1 class="text-center mt-5 mb-4">Game Selector</h1>
+    <button id="ticTacToeButton" class="btn btn-primary btn-lg mb-3" onclick="startTicTacToe()">Play Tic-Tac-Toe</button>
+    <button id="numberGuessButton" class="btn btn-primary btn-lg mb-3" onclick="startNumberGuess()">Play Number Guessing</button>
+    <div id="ticTacToeGame">
+      <h2 class="text-center mt-4 mb-4">TIC-TAC-TOE</h2>
+      <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+      </div>
+      <div class="winning-message mt-4" id="winningMessage">
+        <div id="xWinGif" class="gif" style="display: none;">
+          <img src="Xswin.gif" alt="X's Win GIF">
+        </div>
+        <div id="oWinGif" class="gif" style="display: none;">
+          <img src="Oswin.gif" alt="O's Win GIF">
+        </div>
+        <div id="drawGif" class="gif" style="display: none;">
+          <img src="Draw.gif" alt="Draw GIF">
+        </div>
+        <div data-winning-message-text class="text-center"></div>
+        <button id="restartButton" class="btn btn-primary btn-lg mt-3">Restart</button>
+      </div>
+    </div>
+    <div id="numberGuessGame" style="display: none;">
+      <h2 class="text-center mt-4 mb-4">Number Guessing Game</h2>
+      <p class="text-center">Guess a number between 1 and 10:</p>
+      <input type="number" id="guessInput" class="form-control text-center mb-3" placeholder="Enter your guess">
+      <button id="submitGuessButton" class="btn btn-primary btn-lg" onclick="checkNumberGuess()">Submit Guess</button>
+      <div id="guessResult" class="text-center mt-3"></div>
+    </div>
+  </div>
+</body>
+</html>
